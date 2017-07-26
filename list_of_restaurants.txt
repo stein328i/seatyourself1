@@ -1,25 +1,31 @@
- Links included to get more info like menu items as needed.
+Links included to get more info like menu items as needed.
 
-1. Le Notre Bistro https://www.opentable.com/r/le-notre-bistro-toronto
+https://www.opentable.com/r/le-notre-bistro-toronto
+1. Le Notre Bistro
 Price Range: 31 to 50
 Address: 538 Manning Ave Toronto, ON M6G 2V9
 
-2. Ambiyan https://www.opentable.com/ambiyan
+https://www.opentable.com/ambiyan
+2. Ambiyan
 Price Range: 12 to 30
 Address: 149 Main St. Unionville, ON L3R 2G8
 
-3. LaVinia https://www.opentable.com/lavinia
+https://www.opentable.com/lavinia
+3. LaVinia
 Price Range: 12 to 30
 Address: 2350 Lakeshore Blvd West Toronto, ON M8V 1B8
 
-4. Ovest cucina e Vineria https://www.opentable.com/r/ovest-toronto?p=2&sd=2017-07-27+19%3A00
+https://www.opentable.com/r/ovest-toronto?p=2&sd=2017-07-27+19%3A00
+4. Ovest cucina e Vineria
 Price Range: 14 to 30
 Address: 788 King St W Toronto, ON M5V 1N6
 
-5. Canis Restaurant https://www.opentable.com/r/canis-restaurant-toronto?p=2&sd=2017-07-27%2019%3A00
+https://www.opentable.com/r/canis-restaurant-toronto?p=2&sd=2017-07-27%2019%3A00
+5. Canis Restaurant
 Price Range: 51 to 100
 Address: 746 Queen St. W Toronto, ON M6J 1E9
 
-6. Miku Restaurant https://www.opentable.com/miku-restaurant-toronto?p=2&sd=2017-07-27%2019%3A00
+https://www.opentable.com/miku-restaurant-toronto?p=2&sd=2017-07-27%2019%3A00
+6. Miku Restaurant
 Price Range: 51 to 80
 Address: 105 - 10 Bay Street Toronto, ON M5J 2R8
