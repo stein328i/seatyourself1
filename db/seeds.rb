@@ -9,6 +9,6 @@ Restaurant.create(
 name: '',
 address: '',
 price_range: '',
-menu: ""
-url: ""
+menu: ''
+url: ''
 )
