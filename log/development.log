@@ -3875,3 +3875,61 @@ Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.2ms)
 
 
   [1m[36mReservation Load (1.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddColumnsToRestaurants (20170727212317)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "restaurants" ADD "neighbourhood" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "restaurants" ADD "summary" text[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170727212317"]]
+  [1m[35m (150.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservations_on_restaurant_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservations_on_restaurant_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = ?[0m  [["id", 13]]
+  [1m[35m (107.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = ?[0m  [["id", 14]]
+  [1m[35m (81.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = ?[0m  [["id", 15]]
+  [1m[35m (81.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = ?[0m  [["id", 16]]
+  [1m[35m (81.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = ?[0m  [["id", 17]]
+  [1m[35m (81.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = ?[0m  [["id", 18]]
+  [1m[35m (81.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "price_range", "menu", "url", "created_at", "updated_at", "neighbourhood", "summary") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Le Notre Bistro"], ["address", "538 Manning Ave Toronto, ON M6G 2V9"], ["price_range", "$31 - $50"], ["menu", "menu.png"], ["url", "https://resizer.otstatic.com/v2/photos/large/24943049.jpg"], ["created_at", "2017-07-27 22:11:24.711491"], ["updated_at", "2017-07-27 22:11:24.711491"], ["neighbourhood", "Palmerston - Little Italy"], ["summary", "Le Notre is a 25 seat restaurant, offering 14 seats at dining tables, up to four seats at our Chef’s table, and casual seating along our bar and high-top.\nAt Le Notre we strive to offer you a special experience with an emphasis on quality. Serving great food, and service with attention to details – our essentials.\nIngredients are carefully sourced, GMO free, local, and fresh. Wine - and other libations - are chosen with the same care. The selection is small, but well crafted."]]
+  [1m[35m (71.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "price_range", "menu", "url", "created_at", "updated_at", "neighbourhood", "summary") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ambiyan"], ["address", "149 Main St. Unionville, ON L3R 2G8"], ["price_range", "$12 to $30"], ["menu", "menu.png"], ["url", "https://resizer.otstatic.com/v2/photos/large/24997971.jpg"], ["created_at", "2017-07-27 22:11:24.785862"], ["updated_at", "2017-07-27 22:11:24.785862"], ["neighbourhood", "Unionville"], ["summary", "Located in the heart of historic Unionville, Ontario, Ambiyan brings a cultural richness to the Main Street dining scene offering traditional Indian cuisine in a contemporary setting. Our delicately crafted menu offers a variety of selections to suit all palates, from meat lovers to fish & seafood fans to pure vegetarians. Traditional favorites such as Butter Chicken and Lamb Roganjosh are beautifully complemented by contemporary offerings such Coconut Prawn Curry or Pan seared Scallops. Ambiyan has a well-appointed wine list and a selection of domestic and imported beers, including India\"s famous Kingfisher beer. Enjoy great Indian Cuisine in our elegant dining room or bring it home to enjoy."]]
+  [1m[35m (79.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "price_range", "menu", "url", "created_at", "updated_at", "neighbourhood", "summary") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "LaVinia"], ["address", "2350 Lakeshore Blvd West Toronto, ON M8V 1B8"], ["price_range", "$12 to $30"], ["menu", "menu.png"], ["url", "https://resizer.otstatic.com/v2/photos/large/23872232.jpg"], ["created_at", "2017-07-27 22:11:24.868458"], ["updated_at", "2017-07-27 22:11:24.868458"], ["neighbourhood", "Etobicoke"], ["summary", "After training and studying at the internationally recognized Lausanne Cooking Academy in Switzerland, opening up Prego in Spain, and Bolero in San Francisco, Chef Fernando Garcia brings Spanish food and culture to Toronto with LaVinia.\nThis visit to Spain via The Lakeshore, not far from the water, includes tapas dishes such as Piquilo Peppers Stuffed with a Seafood Mousse and Anisete cream, and Fine Ibérico Spanish Ham. Choose from a large range of slow-cooked paellas, fresh pastas, fish including Basque Style Codfish Stew, and lamb or steak for the meat lovers for your meal."]]
+  [1m[35m (80.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "price_range", "menu", "url", "created_at", "updated_at", "neighbourhood", "summary") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ovest cucina e Vineria"], ["address", "788 King St W Toronto, ON M5V 1N6"], ["price_range", "$14 to $30"], ["menu", "menu.png"], ["url", "https://resizer.otstatic.com/v2/photos/large/24398736.jpg"], ["created_at", "2017-07-27 22:11:24.951567"], ["updated_at", "2017-07-27 22:11:24.951567"], ["neighbourhood", "Entertainment District"], ["summary", "Ovest brings a unquie Italian dinning experience to Toronto! Come into our home to experience authentic Italian cuisine and hospitality. Let us guide you through our handcrafted menu highlighting the best of regional and seasonal Italian cuisine. From our many different pastas spanning regions such as Sardegna to Emilia-Romagna to unique variations on classic Italian dishes such as our Tuna Caprese and Scallop Carpaccio.\nYou want a Roman style pizza? Ovest offers more than just the expected. Our team of highly professional and trained Italian staff will make you forget about Toronto and will take you on a vacation for a few hours to ITALIA!"]]
+  [1m[35m (114.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "price_range", "menu", "url", "created_at", "updated_at", "neighbourhood", "summary") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Canis Restaurant"], ["address", "746 Queen St. W Toronto, ON M6J 1E9"], ["price_range", "51 and up"], ["menu", "menu.png"], ["url", "https://resizer.otstatic.com/v2/photos/large/24686355.jpg"], ["created_at", "2017-07-27 22:11:25.068885"], ["updated_at", "2017-07-27 22:11:25.068885"], ["neighbourhood", "Trinity - Bellwoods"], ["summary", "Inspired by the bounty of Canada, our dishes highlight seasonal, organic, local produce. We honour the profile of the ingredients by creating simple and accessible dishes.\nThis is our interpretation of Canadian cuisine."]]
+  [1m[35m (155.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "price_range", "menu", "url", "created_at", "updated_at", "neighbourhood", "summary") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miku Restaurant"], ["address", "105 - 10 Bay Street Toronto, ON M5J 2R8"], ["price_range", "51 and up"], ["menu", "menu.png"], ["url", "https://resizer.otstatic.com/v2/photos/large/24010766.jpg"], ["created_at", "2017-07-27 22:11:25.227087"], ["updated_at", "2017-07-27 22:11:25.227087"], ["neighbourhood", "Harbourfront"], ["summary", "As the first East Coast location of Vancouver based Aburi Restaurants, Miku is proud to bring Aburi cuisine to Toronto's waterfront. We specialize in innovative Aburi Sushi and seafood. Combining traditional Japanese techniques and flavours with fresh, local ingredients, our highly skilled chefs pair each morsel of sushi with a unique house made sauce in order to bring out the rich flavour profile of the fish, and then seal the flavours with a binchotan (oak charcoal)- accompanied flame sear. The result is the secret to Miku's success: sushi with a smoky aroma, umami flavour, and decadent, melt-in-your-mouth texture. We also offer a variety of seafood entrées, appetizers, as well as seafood platters.\nOur menu is best paired with our extensive sake, wine, and cocktail selection."]]
+  [1m[35m (122.0ms)[0m  [1m[36mcommit transaction[0m
