@@ -1,0 +1,35 @@
+<h1>Make Reservation Right Now!!</h1>
+
+<% if @reservation.errors.any? %>
+  <ul>
+    <% @reservation.errors.full_messages.each do |m| %>
+      <li><%= m %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @reservation do |f| %>
+
+  <div class='field'>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :party_size %>
+    <%= f.text_field :party_size %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :time %>
+    <%= f.text_field :time %>
+  </div>
+
+  <%= f.submit 'Reservation' %>
+
+<% end %>
