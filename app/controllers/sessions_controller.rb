@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   def new
-
   end
 
   def create
@@ -18,7 +17,7 @@ class SessionsController < ApplicationController
     end
 
   end
-  
+
   def destroy
     # Clear the session cookie
     session[:user_id] = nil
@@ -26,5 +25,4 @@ class SessionsController < ApplicationController
     flash[:notice] = "You're logged out!"
     redirect_to root_url
   end
-
 end
