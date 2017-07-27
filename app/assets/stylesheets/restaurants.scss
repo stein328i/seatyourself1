@@ -1,3 +1,33 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// a.restaurant {
+//     // position: static;
+//     // float: right;
+//     width:  100px;
+//     height: 100px;
+//     background-position: 50% 50%;
+//     background-repeat:   no-repeat;
+//     background-size:     cover;
+// }
+
+
+
+img {
+  width:  150px;
+  height: 150px;
+  margin: 10px;
+  float: left;
+  // background-position: 50% 50%;
+  // background-repeat:   no-repeat;
+  // background-size:     cover;
+}
+
+div {
+  overflow: auto;
+  margin: 50px;
+  display: inline-block;
+  width: 550px;
+
+}
