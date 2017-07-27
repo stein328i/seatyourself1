@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     @user.email = params[:user][:email]
     @user.password_digest = params[:user][:password_digest]
-    @user.password_confirmation = params[:user][:password_confirmation]
+    # @user.password_confirmation = params[:user][:password_confirmation]
 
     if @user.save
       flash[:notice] = 'Account successfully created!'
