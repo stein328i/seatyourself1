@@ -1,3 +1,6 @@
+
+<div class="block">
+
 <h1>Make Reservation Right Now!!</h1>
 
 <% if @reservation.errors.any? %>
@@ -8,28 +11,21 @@
   </ul>
 <% end %>
 
-<%= form_for @reservation do |f| %>
 
-  <div class='field'>
+
+<%= form_for @reservation do |f| %>
+  <ol>
     <%= f.label :name %>
     <%= f.text_field :name %>
-  </div>
-
-  <div class='field'>
     <%= f.label :party_size %>
     <%= f.text_field :party_size %>
-  </div>
-
-  <div class='field'>
     <%= f.label :date %>
     <%= f.date_field :date %>
-  </div>
-
-  <div class='field'>
     <%= f.label :time %>
     <%= f.text_field :time %>
-  </div>
+  </ol>
 
   <%= f.submit 'Reservation' %>
 
 <% end %>
+</div>
