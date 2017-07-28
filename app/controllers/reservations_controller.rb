@@ -1,4 +1,7 @@
 class ReservationsController < ApplicationController
+  def index
+    @reservations = current_user.reservations
+  end
 
   def new
     @reservation = Reservation.new
@@ -14,10 +17,11 @@ class ReservationsController < ApplicationController
 
     if @reservation.save
       # flash[:notice] = 'It\'ve sucessfully booked'
-      redirect_to root_url
+      redirect_to reservations_path
     else
       flash.now[:error] = 'Sorry, try again!'
-      redirect_to root_url
+      @restaurant = @reservation.restaurant
+      render 'restaurants/show'
     end
   end
 
@@ -25,6 +29,12 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
     redirect_to new_reservations_path
+  end
+
+  def show
+    @reservation = Reservation.find(params[:id])
+    # @reservation.user_id = current_user.id
+    # @reservation = Reservation.find(params[:user_id])
   end
 
 

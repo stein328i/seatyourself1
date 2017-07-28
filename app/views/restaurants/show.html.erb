@@ -1,6 +1,6 @@
 Restaurant info
 <h1><%= @restaurant.name %></h1>
-<%= render 'single_restaurant', restaurant: @restaurant %>
+<%= render 'restaurants/single_restaurant', restaurant: @restaurant %>
 <% if current_user %>
 <%= render 'reservations/new' %>
 <% else %>

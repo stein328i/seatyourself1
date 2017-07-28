@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170728194418) do
-=======
-ActiveRecord::Schema.define(version: 20170728175910) do
->>>>>>> e3d7eeccf1947b1728877429de35c0584d2590f2
 
   create_table "reservations", force: :cascade do |t|
     t.string   "party_size"
