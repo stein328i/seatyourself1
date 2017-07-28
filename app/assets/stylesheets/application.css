@@ -13,3 +13,78 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+div.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  color: white;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  background-image: url("http://codemahal.com/wp-content/uploads/2016/02/background1.png");
+}
+div.left {
+  display: inline-block;
+  width: 79.5%;
+
+}
+
+div.right {
+  display: inline-block;
+  text-align: center;
+  width: 20%;
+  height: 20px;
+  margin: auto 0 auto 0;
+}
+
+h1.nav_title {
+
+font-family: 'Lobster Two', cursive;
+color: white;
+font-size: 3em;
+margin: 15px 0 15px 0;
+}
+
+p.navbar_text1 {
+  font-size: 1.5em;
+  position: relative;
+  bottom: 10px;
+
+}
+
+
+p a {
+  color: white;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  padding: 2px;
+}
+p a:hover {
+  color: #334eff;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+}
+
+.error {
+  font-size: .9em;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  color: white;
+}
+
+.notice {
+  font-size: .9em;
+  position: absolute;
+  top: 50px;
+  right: 75px;
+  color: white;
+}
