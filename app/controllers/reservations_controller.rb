@@ -4,7 +4,6 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new
   end
 
-
   def create
     @reservation = Reservation.new
     @reservation.name = params[:reservation][:name]
@@ -13,11 +12,11 @@ class ReservationsController < ApplicationController
     @reservation.time = params[:reservation][:time]
 
     if @reservation.save
-      flash[:notice] = 'It\'ve sucessfully booked'
+      # flash[:notice] = 'It\'ve sucessfully booked'
       redirect_to root_url
     else
-      flash.now[:error] = 'Sorry, try again!'
-      redirect_to reservation_path
+      # flash.now[:error] = 'Sorry, try again!'
+      redirect_to root_url
     end
   end
 

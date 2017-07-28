@@ -23,7 +23,7 @@
         <%= link_to 'Logout', sessions_path, method: :delete %>
       </p>
 
-      Hello <%= current_user.email %>, You have <%= current_user.credits %> credits!
+      Hello <%= current_user.email %>
     <% else %>
       <p>
         <%= link_to 'Home', root_path %> |

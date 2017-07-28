@@ -5,6 +5,11 @@ class SessionsController < ApplicationController
   def create
     u = User.find_by(email: params[:session][:email])
 
+    # puts "++++++++++++++++++++++++++++++"
+    # puts params
+    # puts params[:session]
+    # puts params[:session][:password]
+
     if u && u.authenticate(params[:session][:password])
 
       session[:user_id] = u.id
@@ -15,11 +20,13 @@ class SessionsController < ApplicationController
       flash.now[:alert] = 'Try again!'
       render :new
     end
+
   end
 
   def destroy
-    # Clear the session cookie
+
     session[:user_id] = nil
+
     flash[:notice] = "You're logged out!"
     redirect_to root_url
   end
