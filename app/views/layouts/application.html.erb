@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-<<<<<<< HEAD
+
     <title><s>SEATYOURSELF</s></title>
-=======
+
     <title>Open Table</title>
->>>>>>> b39154532bd75deb6f0cc7a9a032cf7730838be0
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -27,7 +27,7 @@
         <%= link_to 'Logout', sessions_path, method: :delete %>
       </p>
 
-      Hello <%= current_user.email %>
+      Hello <%= current_user.email %>, You have <%= current_user.credits %> loyalty credits!
     <% else %>
       <p>
         <%= link_to 'Home', root_path %> |
