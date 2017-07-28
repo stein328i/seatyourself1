@@ -27,7 +27,7 @@
         <%= link_to 'Logout', sessions_path, method: :delete %>
       </p>
 
-      Hello <%= current_user.email %>, You have <%= current_user.credits %> loyalty credits!
+      Hello <%= current_user.email %> you have <%= current_user.credits %> loyalty credits!
     <% else %>
       <p>
         <%= link_to 'Home', root_path %> |
