@@ -72,3 +72,16 @@ neighbourhood: 'Harbourfront',
 summary: "As the first East Coast location of Vancouver based Aburi Restaurants, Miku is proud to bring Aburi cuisine to Toronto's waterfront. We specialize in innovative Aburi Sushi and seafood. Combining traditional Japanese techniques and flavours with fresh, local ingredients, our highly skilled chefs pair each morsel of sushi with a unique house made sauce in order to bring out the rich flavour profile of the fish, and then seal the flavours with a binchotan (oak charcoal)- accompanied flame sear. The result is the secret to Miku's success: sushi with a smoky aroma, umami flavour, and decadent, melt-in-your-mouth texture. We also offer a variety of seafood entrées, appetizers, as well as seafood platters.
 Our menu is best paired with our extensive sake, wine, and cocktail selection."
 )
+# 
+# user1 = User.create(
+#  email: "test@test.com",
+#  password: "testtest"
+# )
+#
+# Reservation.create(
+# party_size: 10,
+# date: '2017-03-02',
+# time: '11pm',
+# user_id: user1.id,
+# restaurant_id:
+# )

@@ -1,4 +1,8 @@
 Restaurant info
 <h1><%= @restaurant.name %></h1>
 <%= render 'single_restaurant', restaurant: @restaurant %>
+<% if current_user %>
 <%= render 'reservations/new' %>
+<% else %>
+<%= link_to 'Please Login to make reservation', new_sessions_path  %>
+<% end %>

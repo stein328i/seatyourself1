@@ -15,8 +15,7 @@
 
 <%= form_for @reservation do |f| %>
   <ol>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.hidden_field :restaurant_id, value: @restaurant.id %>
     <%= f.label :party_size %>
     <%= f.text_field :party_size %>
     <%= f.label :date %>
