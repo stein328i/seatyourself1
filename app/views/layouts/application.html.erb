@@ -25,7 +25,8 @@
 
           <p class="navbar_text1">
             <%= link_to 'Home', root_path %> |
-            <%= link_to 'Logout', sessions_path, method: :delete %>
+            <%= link_to 'Logout', sessions_path, method: :delete %>  |
+            <%= link_to 'My Reservation', reservations_path %>
           </p>
 
         <% else %>
