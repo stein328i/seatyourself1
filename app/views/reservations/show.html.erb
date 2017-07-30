@@ -1,6 +1,6 @@
 <h1>Confirmation Page</h1>
-
-<p><%= @reservation.restaurant.name %></p>
-<p><%= @reservation.party_size %></p>
-<p><%= @reservation.date %></p>
-<p><%= @reservation.time %></p>
+<%= image_tag @reservation.restaurant.url %><br>
+<p>Restaurant name: <%= @reservation.restaurant.name %></p><br>
+<p>Party Size:<%= @reservation.party_size %></p><br>
+<p>Date:<%= @reservation.date %></p><br>
+<p>Time:<%= @reservation.time %></p>
