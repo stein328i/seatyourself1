@@ -5,15 +5,16 @@
 
 
 
-img {
+img.custom {
   width:  150px;
   height: 150px;
   margin: 10px;
   float: left;
 }
 
-div {
-  margin: 10px;
+div.custom {
+  overflow: auto;
+  margin: 50px;
   display: inline-block;
   width: 1200px;
 }
