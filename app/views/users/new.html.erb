@@ -25,6 +25,13 @@
     <%= f.password_field :password_confirmation %>
   </div>
 
+  <div class='field'>
+    <%= f.label "Customer" %>
+    <%= f.radio_button(:account_type, "Customer")%>
+    <%= f.label "Restaurant Owner" %>
+    <%= f.radio_button(:account_type, "Owner")%>
+  </div>
+
   <%= f.submit 'Sign Up' %>
 
 <% end %>

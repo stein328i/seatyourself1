@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user.email = params[:user][:email]
     @user.password = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
-
+    @user.account_type = params[:user][:account_type]
     # puts "log in !!  "
     # puts params[:user][:password]
     # puts params[:user][:password_confirmation]
