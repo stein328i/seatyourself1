@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+  attr_accessor :name, :address, :price_range, :menu, :url, :summary, :opening_time, :closing_time, :party_size
 
   def index
     @restaurants = Restaurant.all
@@ -31,6 +32,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
   end
   def update
+    @restaurant = Restaurant.find(params[:id])
     @restaurant.assign_attributes(restaurant_params)
 
     if @restaurant.save

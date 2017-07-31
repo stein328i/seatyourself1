@@ -1,9 +1,13 @@
 <div class="restaurant">
   <%= image_tag restaurant.url%>
   <h3><%= restaurant.name %></h3>
-  <h3><%= restaurant.address %></h3>
-  <h3><%= restaurant.price_range %></h3>
-  <h3><%= restaurant.neighbourhood %></h3>
+  <h3>Address: <%= restaurant.address %></h3>
+  <h3>Price Range: <%= restaurant.price_range %></h3>
+  <h3>Neighbourhood: <%= restaurant.neighbourhood %></h3>
   <h3><%= restaurant.summary %></h3>
-  <h3><%= image_tag restaurant.menu %></h3>
+  <h3>Menu: <%= image_tag restaurant.menu %></h3>
+  <h3>Open Hours: <%= restaurant.opening_time %></h3>
+  <h3>Close Hours<%= restaurant.closing_time %></h3>
+  <h3>Party Size: <%= restaurant.party_size %></h3>
+  <h3>Maximum Capacity:<%= restaurant.max_capacity %></h3>
 </div>
