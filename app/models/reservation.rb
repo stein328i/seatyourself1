@@ -4,6 +4,7 @@ class Reservation < ApplicationRecord
   validate :reservation_possible
   validate :reservations_party_size
   validate :reservation_available_date
+  validate :restaurant_business_hours
 
   belongs_to :restaurant
   belongs_to :user
@@ -24,10 +25,15 @@ class Reservation < ApplicationRecord
     if self.date < Time.now
       errors.add(:base, "past date is not available to make reservation")
     end
-    def restaurant_business_hours
-      
+
+  end
+
+  def restaurant_business_hours
+    if restaurant.opening_time >= self.time || restaurant.closing_time <= self.time
+      errors.add(:base, "Restaurant is not open.")
     end
   end
+
   # def self.reservation_date
   #   errors.add(:reservation_date, "can't be in the past ") if !reservation_date.black? and reservation_date < Date.today
   # end
