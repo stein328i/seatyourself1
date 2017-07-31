@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :restaurants
   resources :reservations
 
-  resource :users, only: %i(create new)
+  resource :users, only: %i(create new show)
   resource :sessions, only: %i(create new destroy)
 end

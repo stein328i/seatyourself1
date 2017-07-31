@@ -5,9 +5,12 @@ class Reservation < ApplicationRecord
 
   belongs_to :restaurant
   belongs_to :user
-  # 
+  #
   # def self.reservation_date
   #   errors.add(:reservation_date, "can't be in the past ") if !reservation_date.black? and reservation_date < Date.today
+  # end
+  # def self.party_size
+  #
   # end
 
 end

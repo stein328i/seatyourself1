@@ -1,0 +1,11 @@
+<h1>My profile</h1>
+
+<div>
+<%= @user.email %><br>
+<%= @user.account_type %>
+<% if @user.account_type == "Owner" %>
+  <p>you can edit restaurants info</p>
+  <%= link_to 'Registrate my restaurant', new_restaurant_path %>
+<% end %>
+
+</div>
