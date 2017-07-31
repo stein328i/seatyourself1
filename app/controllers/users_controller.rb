@@ -28,4 +28,13 @@ class UsersController < ApplicationController
     @restaurants = @user.restaurants
     # @restaurant = Restaurant.find(params[:id])
   end
+  def destroy
+    @user = current_user
+    @restaurants = @user.restaurants
+    @restaurants.destroy
+    redirect_to users_path
+  end
 end
+# @reservation = Reservation.find(params[:id])
+# @reservation.destroy
+# redirect_to reservations_path

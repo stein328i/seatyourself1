@@ -7,9 +7,13 @@
   <p>you can register or edit restaurants info</p>
   <%= link_to 'Registrate my restaurant', new_restaurant_path %><br>
   <% @restaurants.each do |restaurant| %>
-  <%= image_tag(restaurant.url, size: '100') %>
-  <%= restaurant.name %>
-  <%= link_to 'Edit', edit_restaurant_path(restaurant) %><br>
+  <div>
+    <%= image_tag(restaurant.url, size: '100') %><br>
+    <%= restaurant.name %>
+    <%= link_to 'Edit', edit_restaurant_path(restaurant) %>  |
+    <%= link_to 'Delete', users_path(restaurant), method: :delete %><br>
+  </div>
+
   <% end %>
 <% end %>
 
