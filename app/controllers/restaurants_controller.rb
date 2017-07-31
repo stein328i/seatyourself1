@@ -41,7 +41,11 @@ class RestaurantsController < ApplicationController
       render :edit
     end
   end
-
+  def destroy
+    @restaurants = @user.restaurants
+    @restaurants.destroy
+    redirect_to users_path
+  end
 
   private
 

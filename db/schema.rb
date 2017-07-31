@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170730232645) do
+ActiveRecord::Schema.define(version: 20170731201411) do
 
   create_table "reservations", force: :cascade do |t|
     t.string   "party_size"
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 20170730232645) do
     t.string   "price_range"
     t.text     "menu"
     t.string   "url"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "neighbourhood"
     t.text     "summary"
     t.float    "opening_time"
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20170730232645) do
     t.integer  "max_capacity"
     t.integer  "party_size"
     t.integer  "user_id"
+    t.string   "opening_hours_range"
+    t.string   "closing_hours_range"
     t.index ["user_id"], name: "index_restaurants_on_user_id"
   end
 
