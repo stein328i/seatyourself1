@@ -5,7 +5,6 @@ class Reservation < ApplicationRecord
   validate :reservations_party_size
   validate :reservation_available_date
   validate :restaurant_business_hours
-
   belongs_to :restaurant
   belongs_to :user
 
@@ -17,7 +16,7 @@ class Reservation < ApplicationRecord
 
   def reservations_party_size
     if restaurant.party_size.to_i < self.party_size.to_i
-      errors.add(:base, "You can't make reservation. sorry!")
+      errors.add(:base, "party size is not available!")
     end
   end
 
@@ -30,8 +29,15 @@ class Reservation < ApplicationRecord
 
   def restaurant_business_hours
     if restaurant.opening_time >= self.time || restaurant.closing_time <= self.time
-      errors.add(:base, "Restaurant is not open.")
+      errors.add(:base, "Restaurant is not open yet")
     end
+
+  end
+
+
+  def self.coming_reservation_for_next_week
+    @current_time = Time.now
+    Reservation.where("date >= ? and date <= ?", @current_time, @current_time + (60 * 60 * 24 * 7))
   end
 
   # def self.reservation_date

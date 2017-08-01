@@ -5,4 +5,7 @@ class Restaurant < ApplicationRecord
   def current_capacity
     reservations.map { |r| r.party_size.to_i }.sum
   end
+
+  
+
 end
